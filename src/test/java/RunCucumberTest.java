@@ -6,7 +6,10 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(
     features = "src/test/resources/features",
     glue = "stepdefs",
-    plugin = {"pretty"}
+        plugin = {"pretty",
+                "html:target/cucumber-report/cucumber.html",
+                "json:target/cucumber-report/cucumber.json"
+        }
 )
 public class RunCucumberTest {
 }
